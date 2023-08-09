@@ -1,0 +1,23 @@
+html, body {
+    margin: 0 auto;
+    font: 400 18px/22px 'Montserrat';
+    background-color:rgb(236, 246, 194);
+}
+
+.information-page {
+    text-align: center;
+}
+
+h3,
+.contact-page a {
+    color: rgb(157, 8, 8);
+    text-decoration: underline;
+}
+
+ul {
+    text-align: left;
+}
+
+.contact-page a {
+    padding-left: 25px;
+}
