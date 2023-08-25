@@ -1,10 +1,10 @@
 let yourCitylife;
 
-const toYear = new Date(2023);
+const currentYear = new Date(2023);
 
-const yourYearBirth = prompt("Write your year of birth please:","");
+const yearOfBirth = prompt("Write your year of birth please:","");
 
-if (yourYearBirth === null){
+if (yearOfBirth === null){
     alert (`Шкода, що Ви не захотіли ввести свій рік народження.`);
 } else {
     let yourCity = prompt("Write the city in which you live, please:","");
@@ -17,8 +17,8 @@ if (yourYearBirth === null){
     if(yourFavoriteSport === null){
     alert (`Шкода, що Ви не захотіли ввести свій улюблений спорт.`);
 } else {
-    function yourAge(toYear, yourYearBirth){
-        return toYear - yourYearBirth;
+    function yourAge(currentYear, yourYearBirth){
+        return currentYear - yourYearBirth;
 }
 
 let yourCitylife;
@@ -51,6 +51,6 @@ if (yourFavoriteSport==="Футбол"){
         yourSport= `Твій улюблений спорт це ${yourFavoriteSport}.`
     }
 
-{alert(`Тобі ${yourAge(toYear, yourYearBirth)} р. ${yourCitylife} ${yourSport}`)};
+{alert(`Тобі ${yourAge(currentYear, yearOfBirth)} р. ${yourCitylife} ${yourSport}`)};
 
 }}}
