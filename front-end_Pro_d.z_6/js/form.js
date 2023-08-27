@@ -2,7 +2,7 @@
 let number = '';
 
 for (let i= 10; i <=20; i++) {
-    number += (i + ', ');
+    number += i + ', ';
 }
 
 number = number.slice(0, -2);
@@ -13,9 +13,9 @@ alert(number);
 let squares = '';
 
 for (let i = 10; i <=20; i++) {
-    let squre = (i * i);
+    let squre = i * i;
 
-    squares += (squre + ', ');
+    squares += squre + ', ';
 }
 
 squares = squares.slice(0, -2);
@@ -27,7 +27,7 @@ let multiplicationTable = '';
 
 for (let i = 1; i <= 10; i++) {
 
-   multiplicationTable += ('7 x ' + i + ' = ' + 7 * i + '\n');
+   multiplicationTable += '7 x ' + i + ' = ' + 7 * i + '\n';
 
 }
 
@@ -38,7 +38,7 @@ let sum = 0;
 
 for (let i = 1; i <= 15; i++) {
     if (i % 1 === 0) {
-        sum += (i);
+        sum += i;
     }
 }
 
@@ -49,7 +49,7 @@ let num = 1;
 
 for (let i = 15; i <= 35; i++) {
     if (i % 1 === 0) {
-        num *= (i);
+        num *= i;
     }
 }
 
@@ -62,7 +62,7 @@ let calculation = 0;
 
 for (let i = 1; i <= 500; i++) {
     if (i % 1 === 0) {
-        summ += (i);
+        summ += i;
         calculation++;
     }
 }
@@ -76,7 +76,7 @@ let summm = 0;
 
 for (let i = 30; i <= 80; i++) {
     if (i % 2 === 0) {
-        summm += (i);
+        summm += i;
     }
 }
 
@@ -127,7 +127,7 @@ let sumDivisors = 0;
 for (var i = 1; i <= integer; i++) {
     if (integer % i === 0) {
         if (i % 2 === 0) {
-            sumDivisors += (i);
+            sumDivisors += i;
         }
     }
 }
@@ -139,7 +139,7 @@ let table = '';
 
 for (let i = 1; i <=10; i++) {
     for (let j=1; j <= 10; j++) {
-        table += (i + ' x ' + j + ' = ' + i * j + '' + '.  ');
+        table += i + ' x ' + j + ' = ' + i * j + '' + '.  ';
     }
     table += '\n';
 }
