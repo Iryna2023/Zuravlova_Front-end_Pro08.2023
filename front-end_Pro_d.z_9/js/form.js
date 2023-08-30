@@ -1,16 +1,11 @@
 //Дан масив [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47] Знайти суму та кількість позитивних елементів.
 let arr = [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
 
-let sum = 0;
+let positiveArr = arr.filter(num => num > 0);
 
-let count = 0;
+let sum = positiveArr.reduce((a, b) => a + b, 0);
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-        sum += arr[i];
-        count++;
-    }
-}
+let count = positiveArr.length;
 
 alert('Сума позитивних елементів = ' + sum + '\nКількість позитивних елементів = ' + count);
 
@@ -29,78 +24,52 @@ let indexx = arr.indexOf(max);
 alert('Максимальний елемент масиву: ' + max + '\nПорядковий номер максимального елементу масиву: ' + indexx);
 
 //Визначити кількість негативних елементів.
-let countt = 0;
+let negativeArr = arr.filter(num => num < 0);
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < 0) {
-        countt++;
-    }
-}
+let countt = negativeArr.length;
 
 alert('Кількість негативних елементів: ' + countt);
 
 //Знайти кількість непарних позитивних елементів.
-let counttt = 0;
+let oddPositiveArr = arr.filter (num => num > 0 && num % 2 !==0);
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0 && arr[i] % 2 !== 0) {
-        counttt++;
-    }
-}
+let counttt = oddPositiveArr.length;
 
 alert('Кількість непарних позитивних елементів: ' + counttt);
 
 //Знайти кількість парних позитивних елементів.
-let countttt = 0;
+let evenPositiveArr = arr.filter(num => num > 0 && num % 2 === 0);
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0 && arr[i] % 2 === 0) {
-        countttt++;
-    }
-}
+let countttt = evenPositiveArr.length;
 
 alert('Кількість парних позитивних елементів: ' + countttt);
 
 //Знайти суму парних позитивних елементів.
-let summ = 0;
+let evenPositiveArrr = arr.filter(num => num > 0 && num % 2 ===0);
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0 && arr[i] % 2 === 0) {
-        summ += arr[i];
-    }
-}
+let summ = evenPositiveArrr.reduce((a, b) => a + b, 0);
 
-alert('Сума парних позитивних елементів: ' +summ);
+alert('Сума парних позитивних елементів: ' + summ);
 
 //Знайти суму непарних позитивних елементів.
-let summm = 0;
+let addPositiveArrrr = arr.filter(num => num > 0 && num % 2 !== 0);
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0 && arr[i] % 2 !== 0) {
-        summm += arr[i];
-    }
-}
+let summm = addPositiveArrrr.reduce((a, b) => a + b, 0);
 
 alert('Сума непарних позитивних елементів: ' + summm);
 
 //Знайти добуток позитивних елементів.
-let product = 1;
+let positiveArrr = arr.filter(num => num > 0);
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-        product *= arr[i];
-    }
-}
+let product = positiveArrr.reduce((a, b) => a * b, 1);
 
 alert('Добуток позитивних елементів: ' + product);
 
 //Знайти найбільший серед елементів масиву, інші обнулити.
 let maxElement = Math.max(...arr);
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] !== maxElement) {
-        arr[i] = 0;
-    }
-}
+arr.fill(0);
+
+arr[arr.indexOf(maxElement)] = maxElement;
 
 alert('Найбільший елемент серед елементів масиву: ' + maxElement + '\nМасив після обнулення: ' + arr);
