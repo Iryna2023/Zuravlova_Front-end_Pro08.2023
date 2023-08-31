@@ -29,6 +29,8 @@ let theNumbers = '';
 for (let i = 1; i <= 100; i++) {
     if (i * i <= n) {
         theNumbers += i + ', ';
+    } else {
+        break;
     }
 }
 
@@ -38,17 +40,18 @@ alert(theNumbers);
 
 //Дане ціле число. З'ясувати, чи є воно простим (простим називається число, більше 1, які не мають інших дільників крім 1 і себе).
 function isPrime(num) {
-    for(var i = 2; i <= num; i++)
+    for (let i = 2; i < num; i++) {
         if(num % i === 0) return false;
+    }
     return num !== 1;
 }
 
-let number = 5;
+let numberrr = 37;
 
-if (isPrime(number)) {
-    alert(number + ' - число є простим');
+if (isPrime(numberrr)) {
+    alert(numberrr + ' - число є простим');
 } else {
-    alert(number + ' - число не є простим');
+    alert(numberrr + ' - число не є простим');
 }
 
 //Дане деяке число. Визначити, чи можна одержати це число шляхом зведення числа 3 у деякий ступінь. (Наприклад, числа 9, 81 можна отримати, а 13 - не можна).
