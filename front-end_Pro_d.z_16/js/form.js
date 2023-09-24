@@ -24,7 +24,9 @@ Object.defineProperty(Roles, 'Admin', {
             canAddAdmin: false
         }
     }),
-    writable: false
+    writable: false,
+    configurable: false,
+    enumerable: true
 });
 
 Object.defineProperty(Roles, 'Editor', {
@@ -38,7 +40,9 @@ Object.defineProperty(Roles, 'Editor', {
             canAddAdmin: false
         }
     }),
-    writable: false
+    writable: false,
+    configurable: false,
+    enumerable: true
 });  
 
 Object.defineProperty(Roles, 'Reader', {
@@ -52,7 +56,9 @@ Object.defineProperty(Roles, 'Reader', {
             canAddAdmin: false
         }
     }),
-    writable: false
+    writable: false,
+    configurable: false,
+    enumerable: true
 });
 
 Object.defineProperty(Roles, 'SuperAdmin', {
@@ -66,7 +72,9 @@ Object.defineProperty(Roles, 'SuperAdmin', {
             canAddAdmin: true
         }
     }),
-    writable: false
+    writable: false,
+    configurable: false,
+    enumerable: true
 });
 
 Object.freeze(Roles);
@@ -80,6 +88,10 @@ class User {
     constructor(id, firstName, lastName, role) {
         if (typeof id !== 'number') {
             throw new Error('id must be a number');
+        }
+
+        if (!isValidRole(role)) {
+            throw new Error('Invalid role');
         }
 
         this.id = id;
