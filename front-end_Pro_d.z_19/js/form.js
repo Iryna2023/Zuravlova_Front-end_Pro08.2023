@@ -1,3 +1,7 @@
+const timeDisplay = document.getElementById('timeDisplay');
+
+const formatTime = (time) => time < 10 ? '0' + time : time;
+
 class StopWatch {
     constructor(callback) {
         this.time = {hours: 0, minutes: 0, seconds: 0};
@@ -42,16 +46,18 @@ class StopWatch {
     }
 }
 
-const onTick = (time) => alert(JSON.stringify(time));
+const onTick = (time) => {
+    timeDisplay.textContent = 
+    `${formatTime(time.hours)}:${formatTime(time.minutes)}:${formatTime(time.seconds)}`;
+};
+
 const stopWatch = new StopWatch(onTick);
 
 stopWatch.start();
 setTimeout(() => {
     stopWatch.pause();
-    alert((JSON.stringify(stopWatch.getTime())));
 }, 5000);
 
 setTimeout(() => {
     stopWatch.reset();
-    alert((JSON.stringify(stopWatch.getTime())));
 }, 10000);
