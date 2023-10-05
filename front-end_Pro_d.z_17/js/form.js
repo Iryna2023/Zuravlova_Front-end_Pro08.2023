@@ -1,17 +1,17 @@
 class StopWatch {
     constructor(callback) {
         this.time = {hours: 0, minutes: 0, seconds: 0};
-        this.intervalid = null;
+        this.intervalId = null;
         this.callback = callback;
     }
 
     start() {
-        if (this.intervalid) return;
+        if (this.intervalId) return;
 
-        this.intervalid = setInterval(() => {
+        this.intervalId = setInterval(() => {
             this.time.seconds++;
 
-            if (this.time.seconds >= 60) {
+            if (this.time.seconds > 59) {
                 this.time.minutes++;
                 this.time.seconds = 0;
             }
@@ -26,10 +26,10 @@ class StopWatch {
     }
 
     pause() {
-        if (!this.intervalid) return;
+        if (!this.intervalId) return;
 
-        clearInterval(this.intervalid);
-        this.intervalid = null;
+        clearInterval(this.intervalId);
+        this.intervalId = null;
     }
 
     reset() {
