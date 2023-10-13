@@ -1,0 +1,30 @@
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-img {
+    width: 700px;
+    height: 600px;
+    object-fit: cover;
+    transition: opacity 1s;
+}
+
+.slider-img.fade {
+    opacity: 1;
+}
+
+.next-button, .prev-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next-button {
+    right: 10px;
+}
+
+.prev-button {
+    left: 10px;
+}
