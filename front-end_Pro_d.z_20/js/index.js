@@ -2,11 +2,11 @@ import StopWatch from "./stopwatch.js";
 
 import StopwatchUI from "./stopwatch-ui.js";
 
-const stopwatch = {hours: 0, minutes: 0, seconds: 0};
+const initialTime = {hours: 0, minutes: 0, seconds: 0};
 
-const ui = new StopwatchUI(stopwatch);
+const ui = new StopwatchUI(initialTime);
 
-const callback = (getTime) => ui.setTime(getTime);
+const callback = (onTick) => ui.setTime(onTick);
 
 const stopWatch = new StopWatch(callback);
 
@@ -16,8 +16,8 @@ ui.addResetBtnListener(e => stopWatch.reset());
 
 ui.appendStopWatch(document.body);
 
-const stopwatch1 = {hours: 0, minutes: 0, seconds: 0};
-const ui1 = new StopwatchUI(stopwatch1);
+const initialTime1 = {hours: 0, minutes: 0, seconds: 0};
+const ui1 = new StopwatchUI(initialTime1);
 const callback1 = (time) => ui1.setTime(time);
 const stopWatch1 = new StopWatch(callback1);
 
@@ -26,8 +26,8 @@ ui1.addPauseBtnListener(e => stopWatch1.pause());
 ui1.addResetBtnListener(e => stopWatch1.reset());
 ui1.appendStopWatch(document.body);
 
-const stopwatch2 = {hours: 0, minutes: 0, seconds: 0};
-const ui2 = new StopwatchUI(stopwatch2);
+const initialTime2 = {hours: 0, minutes: 0, seconds: 0};
+const ui2 = new StopwatchUI(initialTime2);
 const callback2 = (time) => ui2.setTime(time);
 const stopWatch2 = new StopWatch(callback2);
 

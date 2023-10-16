@@ -1,6 +1,6 @@
 export default class StopwatchUI {
-    constructor(stopwatch) {
-        this.stopwatch = stopwatch;
+    constructor(initialTime) {
+        this.initialTime = initialTime;
         this.clockElement = document.createElement('div');
         this.startButton = document.createElement('button');
         this.pauseButton = document.createElement('button');
@@ -14,7 +14,7 @@ export default class StopwatchUI {
         this.pauseButton.style.backgroundColor = 'yellow';
         this.resetButton.style.backgroundColor = 'red';
 
-        this.time = { hours: 0, minutes: 0, seconds: 0 };
+        this.time = initialTime;
 
         this.setTime(this.time);
 
@@ -46,7 +46,4 @@ export default class StopwatchUI {
         this.clockElement.textContent = formattedTime;
     }
 
-    update() {
-        this.setTime(this.stopwatch.getTime());
-    }
 }

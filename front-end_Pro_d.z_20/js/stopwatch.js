@@ -21,7 +21,7 @@ export default class StopWatch {
                 this.time.minutes = 0;
             }
 
-            this.callback(this.getTime());
+            this.callback(this.onTick());
         }, 1000);
     }
 
@@ -35,10 +35,10 @@ export default class StopWatch {
     reset() {
         this.pause();
         this.time = {hours: 0, minutes: 0, seconds: 0};
-        this.callback(this.getTime());
+        this.callback(this.onTick());
     }
 
-    getTime() {
+    onTick() {
         return {...this.time};
     }
 }
