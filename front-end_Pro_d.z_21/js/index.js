@@ -9,13 +9,12 @@ if (!images.length || !nextButton || !prevButton) {
 } else {
 
     function showImage(i) {
-        images.forEach(img => {
-            img.style.display = 'none';
-            img.classList.remove('fade');
-    });
+        const visibleImage = document.querySelector('.slider-img.visible');
+            if (visibleImage) {
+                visibleImage.classList.remove('visible');
+            }
 
-        images[i].style.display = 'block';
-        images[i].classList.add('fade');
+        images[i].classList.add('visible');
 
         prevButton.style.display = (i === 0) ? 'none' : 'block';
         nextButton.style.display = (i === images.length - 1) ? 'none' : 'block';
@@ -38,5 +37,6 @@ if (!images.length || !nextButton || !prevButton) {
     nextButton.addEventListener('click', nextImage);
     prevButton.addEventListener('click', prevImage);
 
-    showImage(index);
+    images[index].classList.add('visible');
+    prevButton.style.display = 'none';
 }

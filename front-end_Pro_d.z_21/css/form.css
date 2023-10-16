@@ -5,10 +5,15 @@
 }
 
 .slider-img {
+    display: none;
     width: 700px;
     height: 600px;
     object-fit: cover;
     transition: opacity 1s;
+}
+
+.slider-img.visible {
+    display: block;
 }
 
 .slider-img.fade {
