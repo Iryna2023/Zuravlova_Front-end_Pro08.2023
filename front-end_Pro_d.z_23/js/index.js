@@ -125,6 +125,7 @@ document.getElementById('basket-link').addEventListener('click', (event) => {
     document.getElementById('product-details-container').innerHTML = '';
     displayBasket();
     window.location.hash = '/basket';
+    history.pushState({page: 'Basket'}, '', '/basket');
 });
 
 document.getElementById('store-name').addEventListener('click', (event) => {
@@ -133,6 +134,7 @@ document.getElementById('store-name').addEventListener('click', (event) => {
     document.getElementById('product-details-container').innerHTML = '';
     displayCategories();
     window.location.hash = '/';
+    history.pushState({page: 'Home'}, '', '/');
 });
 
 window.addEventListener("popstate", function(event) {
