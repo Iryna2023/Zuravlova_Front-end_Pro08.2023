@@ -3,7 +3,7 @@ function toCamelCase(str) {
         return str;
     }
 
-    return str.replace(/_([a-z])/g, function (g) { return g[1].toUpperCase(); });
+    return str.replace(/_([a-z])/g, function (match, group) { return group.toUpperCase(); });
 }
 
 const response = {
