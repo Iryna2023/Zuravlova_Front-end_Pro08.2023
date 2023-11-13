@@ -210,3 +210,13 @@ document.addEventListener(
     },
     false
 );
+
+window.store = store;
+
+window.fetch('/api/data')
+    .then(response => response.json())
+    .then(data => {
+        const dataElement = document.getElementById('data');
+        dataElement.textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(error => console.error('Помилка:', error));
