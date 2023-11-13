@@ -194,19 +194,29 @@ function eventedPushState(state, title, url) {
 document.addEventListener(
     'onpushstate',
     function (event) {
-      const url = event.detail.url;
-      if (url === '/basket') {
-        displayBasket();
-      } else if (url.startsWith('/+')) {
-        const parts = url.slice(1).split('/');
+        const url = event.detail.url;
+        if (url === '/basket') {
+            displayBasket();
+        } else if (url.startsWith('/+')) {
+            const parts = url.slice(1).split('/');
         if (parts.length > 1) {
-          displayProductDetails(parts[1]);
+            displayProductDetails(parts[1]);
         } else {
-          displayProducts(parts[0]);
+            displayProducts(parts[0]);
         }
-      } else {
+        } else {
         displayCategories();
       }
     },
     false
 );
+
+window.store = store;
+
+window.fetch('/api/data')
+    .then(response => response.json())
+    .then(data => {
+        const dataElement = document.getElementById('data');
+        dataElement.textContent = JSON.stringify(data, null, 2);
+    })
+    .catch(error => console.error('Помилка:', error));
