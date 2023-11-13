@@ -2,6 +2,7 @@ const store = require('../front-end_Pro_d.z_23/js/index.js');
 const express = require('express');
 const app = express();
 const path = require('path');
+
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
