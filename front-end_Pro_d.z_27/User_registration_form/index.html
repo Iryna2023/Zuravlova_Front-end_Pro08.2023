@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <title>Homework 22. User registration form.</title>
+</head>
+<body>
+    <h2>Заповніть, будь ласка, форму реєстрації:</h2>
+    <form id="registrationForm">
+        Ім'я:<br>
+            <input type="text" id="fname" name="firstname" required>
+            <br>
+        Прізвище:<br>
+            <input type="text" id="lname" name="lastname" required>
+            <br>
+        Дата народження:<br>
+            <input type="text" id="dob" name="dob" required>
+            <br>
+        Стать:<br>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Чоловіча</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Жіноча</label>
+            <br>
+        Місто:<br>
+            <select id="city" name="city" required>
+                <option value="">Оберіть місто:</option>
+                <option value="kyiv">Київ</option>
+                <option value="kharkiv">Харків</option>
+                <option value="lviv">Львів</option>
+                <option value="sumy">Суми</option>
+            </select>
+        <br>
+        Адреса:<br>
+            <textarea id="address" name="address" required></textarea>
+            <br>
+        Ваша пошта:<br>
+            <input type="email" id="email" name="email" required>
+            <br>
+        Спорт, який Вам подобається більше:<br>
+            <select id="sport" name="sport" required>
+                <option value="">Оберіть вид спорту:</option>
+                <option value="football">Футбол</option>
+                <option value="basketball">Баскетбол</option>
+                <option value="tennis">Теніс</option>
+            </select>
+            <br>
+        Мови, якими володієте:<br>
+            <input type="checkbox" id="ukrainian" name="language1" value="Ukrainian">
+            <label for="ukrainian"> Українська</label><br>
+            <input type="checkbox" id="english" name="language2" value="English">
+            <label for="english"> Англійська</label><br>
+            <input type="checkbox" id="polish" name="language3" value="Polish">
+            <label for="polish"> Польська</label><br>
+        <input type="button" value="Зберегти" onclick="submitForm()">
+    </form>
+    <p id='output'></p>
+    <script src="./js/index.js"></script>
+</body>
+</html>
