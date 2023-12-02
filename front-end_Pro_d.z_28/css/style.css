@@ -1,0 +1,37 @@
+body {
+    background-color: #f6f3f3;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #4a0713;
+}
+
+#cityName {
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+button, #cityName, .weather {
+    border-radius: 5px; 
+    border: 1px solid #7e7d7d;
+}
+
+button {
+    padding: 10px 37px;
+    background-color: #56be06;
+    color: #f9f9f8;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e9404;
+}
+
+.weather {
+    background-color: #fefbfb;
+    padding: 20px;
+    margin: 20px;
+}
