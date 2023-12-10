@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  padding: 50px;
+}
+
+input[type="text"], button {
+  border-radius: 15px;
+  font-size: 16px;
+  border: 1px solid #9a9797;
+}
+
+input[type="text"] {
+  padding: 10px;
+  background-color: rgb(250, 237, 211);
+}
+
+button {
+  margin: 16px;
+  padding: 10px 20px;
+  background-color: #eeff00;
+  color: rgb(69, 1, 1);
+  text-transform:uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b7f00c;
+}
