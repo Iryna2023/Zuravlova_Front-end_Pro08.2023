@@ -1,0 +1,40 @@
+body {
+  margin: 10px;
+  padding: 0;
+  text-align: center;
+  background-color: #f4e9e9;
+}
+
+h1 {
+  color: #382121;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 3px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #a39e9e;
+  background-color: #fdfcfc;
+}
+
+a {
+  color: #83242c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+  object-fit: cover;
+}
