@@ -1,0 +1,52 @@
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+th {
+  background-color:  rgb(88, 178, 208);
+  color: rgb(237, 233, 233);
+}
+
+tr:hover {background-color:  rgb(212, 205, 205)}
+
+button {
+  background-color:  rgb(12, 221, 117);
+  border: none;
+  color: rgb(22, 21, 21);
+  padding: 7px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+  font-size: 16px;
+  margin: 7px 15px;
+  cursor: pointer;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 5px;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #6b1414;
+}
