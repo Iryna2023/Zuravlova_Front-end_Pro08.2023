@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { toggleTodo, deleteTodo, editTodo } from './actions';
+import { toggleTodo, deleteTodo, editTodo } from './store/actions';
 
 const ListItem = ({ todo }) => {
     const [isEditing, setIsEditing] = useState(false);
@@ -18,7 +18,7 @@ const ListItem = ({ todo }) => {
     };
   
     const handleEdit = (id, newText) => {
-        dispatch(editTodo(id, newText));
+        dispatch(editTodo({ id, newText }));
         setIsEditing(false);
     };
   

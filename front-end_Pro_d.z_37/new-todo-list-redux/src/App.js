@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { useSelector, useDispatch } from 'react-redux';
-import { addTodo, toggleTodo, deleteTodo } from './actions';
+import { addTodo, toggleTodo, deleteTodo } from './store/actions';
 import List from './TodoList';
 import Form from './Form';
 import { store } from './store';

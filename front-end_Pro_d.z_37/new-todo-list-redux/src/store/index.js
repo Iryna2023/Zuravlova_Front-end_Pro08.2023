@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { todosReducer } from './reducers';
-import { loadState, saveState } from './localStorage'; 
+import { loadState, saveState } from '../localStorage'; 
 
 const preloadedState = loadState(); 
 

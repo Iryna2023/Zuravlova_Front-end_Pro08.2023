@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo } from './actions';
+import { addTodo } from './store/actions';
 
 const Form = () => {
   const [input, setInput] = useState('');
