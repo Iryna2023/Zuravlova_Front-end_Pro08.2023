@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchTodos, addTodo, toggleTodo, deleteTodo, editTodo } from './store/todos/todosSlice';
+import { fetchTodos, addTodo, deleteTodo, editTodo } from './store/todos/todosSlice';
 import Form from './Form';
 import TodoList from './TodoList';
 
@@ -9,24 +9,11 @@ const App = () => {
   const todos = useSelector(state => state.todos);
 
   useEffect(() => {
-    const savedTodos = localStorage.getItem('todos');
-    if (savedTodos) {
-        dispatch({ type: 'todos/setTodos', payload: JSON.parse(savedTodos) });
-    } else {
-        dispatch(fetchTodos());
-    }
-}, [dispatch]);
-
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
-  }, [todos]);
+    dispatch(fetchTodos());
+  }, [dispatch]);
 
   const handleAdd = (todo) => {
     dispatch(addTodo(todo));
-  };
-
-  const handleToggle = (id) => {
-    dispatch(toggleTodo(id));
   };
 
   const handleDelete = (id) => {
@@ -35,6 +22,12 @@ const App = () => {
 
   const handleEdit = (todo) => {
     dispatch(editTodo(todo));
+  };
+
+  const handleToggle = (id) => {
+    const todo = todos.find((todo) => todo.id === id);
+    const updatedTodo = { ...todo, done: !todo.done };
+    dispatch(editTodo(updatedTodo));
   };
 
   return (

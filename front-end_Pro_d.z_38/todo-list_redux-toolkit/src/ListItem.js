@@ -21,7 +21,7 @@ const ListItem = ({ todo, handleToggle, handleDelete, handleEdit }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleEdit({ id: todo.id, newText: state.editText });
+    handleEdit({ ...todo, text: state.editText });
     dispatch({ type: 'CANCEL_EDITING' });
   };
 
