@@ -7,7 +7,7 @@ const todosSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            .addCase(fetchTodos.fulfilled, (state, action) => {
+        .addCase(fetchTodos.fulfilled, (state, action) => {
             return action.payload;
         })
         .addCase(fetchTodos.rejected, (state, action) => {

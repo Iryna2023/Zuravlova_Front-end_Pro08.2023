@@ -1,17 +1,19 @@
 import React from 'react';
 import ListItem from './ListItem';
 import { useSelector } from 'react-redux';
-import './App.css'
+import { Grid } from '@mui/material';
 
 const TodoList = () => {
   const todos = useSelector(state => state.todos);
 
   return (
-    <div>
-      {Array.isArray(todos) && todos.map((todo, index) => (
-        <ListItem key={todo.id} todo={todo} />
+    <Grid container spacing={2}>
+      {todos.map((todo) => (
+        <Grid item key={todo.id}>
+          <ListItem todo={todo} />
+        </Grid>
       ))}
-    </div>
+    </Grid>
   );
 };
 
